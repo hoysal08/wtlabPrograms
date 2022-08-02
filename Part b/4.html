@@ -8,7 +8,23 @@
 </head>
 <body>
     <script>
-        
+        let prm=(str)=> new Promise((resolve,reject)=>{
+            if(str=="Paris")
+            {
+                resolve("Let's take a trip to Paris")
+            }
+            else
+            {
+                reject("Invalid location")
+            }
+        })
+        let ip=prompt("Enter the location")
+        prm(ip).then((val)=>{
+            document.write(val)
+        })
+        .catch((val)=>{
+            document.write(val)
+        })
     </script>
     
 </body>

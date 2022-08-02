@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkit(b,v)
+        {
+            let i=0;
+            let j=0;
+            let count=0;
+            while(i<b.length && j<v.length)
+            {
+              if(b[i]==v[j])
+              {
+                i++;
+                j++;
+                count++;
+              }
+              else
+              {
+                j++;
+              }
+              
+            }
+            if(count==b.length)
+            {
+                document.write("positive")
+            }
+            else
+            {
+                document.write("negative")
+            }
+        }
+        let vr=prompt("enter virus pattern");
+        let blodd=prompt("enter the blood pattern")
+        checkit(blodd,vr)
+    </script>
+    
+</body>
+</html>
