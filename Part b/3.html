@@ -32,17 +32,23 @@
 
           let n1=parseInt(prompt("enter first number"))
           let n2=parseInt(prompt("enter second number"));
+          let ele=document.getElementById("cnt")
           add(n1,n2).then((val)=>{
-            document.write(val);
+            ele.innerHTML+=val
           })
           sub(n1,n2).then((val)=>{
-            document.write(val)
+            // document.write(val)
+            ele.innerHTML+=val
+
           })
           multi(n1,n2).then((val)=>{
-            document.write(val)
+            // document.write(val)
+            ele.innerHTML+=val
+
           })
           div(n1,n2).then((val)=>{
-            document.write(val)
+            // document.write(val)
+            ele.innerHTML+=val
           })
     </script>
     
