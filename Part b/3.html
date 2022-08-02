@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="cnt"></p>
+    <script>
+        let add=(n1,n2)=>new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve(`The sum is : ${n1+n2} <br>`);
+            },2000)
+        })
+        let sub=(n1,n2)=>new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve(`The sum is : ${n1-n2} <br>`);
+            },2000)
+        })
+        let multi=(n1,n2)=>new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve(`The sum is : ${n1*n2} <br>`);
+            },2000)
+        })
+        let div=(n1,n2)=>new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve(`The sum is : ${n1/n2} <br>`);
+            },2000)
+        })
+
+          let n1=parseInt(prompt("enter first number"))
+          let n2=parseInt(prompt("enter second number"));
+          add(n1,n2).then((val)=>{
+            document.write(val);
+          })
+          sub(n1,n2).then((val)=>{
+            document.write(val)
+          })
+          multi(n1,n2).then((val)=>{
+            document.write(val)
+          })
+          div(n1,n2).then((val)=>{
+            document.write(val)
+          })
+    </script>
+    
+</body>
+</html>

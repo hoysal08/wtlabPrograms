@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function jmpsrch(arr,val,jmp)
+        {
+            let n=arr.length
+            let i=0;
+            let prev=0;
+            while(i<n && arr[i]<=val)
+            {
+                if(arr[i]==val)
+                {
+                    return i;
+                }
+                prev=i;
+                i=i+jmp-1;
+            }
+            while(i>=prev)
+            {
+                if(arr[i]==val)
+                {
+                    return i;
+                }
+                else
+                {
+                    i=i-1;
+                }
+            }
+            
+            
+            return -1;
+
+        }
+
+        let n=prompt("enter the number of elements")
+        let arr=[n]
+        for(let i=0;i<n;i++)
+        {
+            arr[i]=prompt(`enter the array ele at index ${i}`)
+        }
+        console.log(arr)
+        let len=arr.length
+        let key=prompt("enter the key to be found");
+        let jump=parseInt(Math.sqrt(len))
+        document.write(jmpsrch(arr,key,jump))
+    </script>
+    
+</body>
+</html>

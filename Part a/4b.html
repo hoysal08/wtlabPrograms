@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+       let m= new Map()
+        let n=parseInt(prompt("enter the number of elements you want in the set"));
+        for(let i=0;i<n;i++)
+        { 
+                m.set(i,prompt(`enter the ${i+1} element`));
+        }
+        setTimeout(()=>{
+            let k = parseInt(prompt("enter the key to find value"))
+            document.write(`The value for key ${k} is ${m.get(k)}`)
+            m.forEach(ele=>document.write(`<br>${ele} `));
+
+        },2500)
+        m.forEach(ele=>document.write(`${ele} <br>`));
+    </script>
+    
+</body>
+</html>

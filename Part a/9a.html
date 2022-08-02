@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function capatfirst(str)
+        {
+          let arr=str.split("")         
+          arr[0]=arr[0].toUpperCase();
+          return arr.join("")
+        }
+        function breakit(str)
+        {
+           document.write(str.split(" "))
+        }
+        let ch=prompt("enter 1 or 2")
+        if(ch==1)
+        {
+        
+            let str=prompt("enter the string")
+            document.write(capatfirst(str))
+        }
+        else
+        {
+            let str=prompt("enter a sentence")
+            breakit(str)
+        }
+       
+    </script>
+</body>
+</html>

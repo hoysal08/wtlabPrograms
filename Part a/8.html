@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let alpha="abcdefghijklmnopqrstuvwxyz".split("")
+        let ip=prompt("Enter the string");
+        let key=parseInt(prompt("enter the key to used to encrypt"))
+        function encrypt(str)
+        {
+            let arr=str.split("")
+            arr.forEach((ele,ind)=>{
+                ele=ele.toLowerCase()
+                arr[ind]=alpha[alpha.indexOf(ele)+key]
+            })
+            let res=arr.join("")
+            document.write(res)
+        }
+        encrypt(ip)
+    </script>
+    
+</body>
+</html>
